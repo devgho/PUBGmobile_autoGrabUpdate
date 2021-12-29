@@ -1,8 +1,7 @@
 filename=`python3 /home/data/jymdata/auto_spider_apk/pubg/dl.py`
-fullpath="/home/data/jymdata/auto_spider_apk/pubg/$filename"
-name=`aapt dump badging /home/data/jymdata/auto_spider_apk/pubg/$filename|grep package|grep -oP name=\'.*?\'|grep -o \'.*\'`
-version_code=`aapt dump badging /home/data/jymdata/auto_spider_apk/pubg/$filename|grep package|grep -oP versionCode=\'.*?\'|grep -o \'.*\'`
-version_name=`aapt dump badging /home/data/jymdata/auto_spider_apk/pubg/$filename|grep package|grep -oP VersionName=\'.*?\'|grep -o \'.*\'`
+name=`/home/fujianfeng/android-9/aapt dump badging /home/data/jymdata/auto_spider_apk/pubg/$filename|grep package|grep -oP name=\'.*?\'|grep -o \'.*\'`
+version_code=`/home/fujianfeng/android-9/aapt dump badging /home/data/jymdata/auto_spider_apk/pubg/$filename|grep package|grep -oP versionCode=\'.*?\'|grep -o \'.*\'`
+version_name=`/home/fujianfeng/android-9/aapt dump badging /home/data/jymdata/auto_spider_apk/pubg/$filename|grep package|grep -oP VersionName=\'.*?\'|grep -o \'.*\'`
 name=`echo $name|sed "s/^\([\"']\)\(.*\)\1\$/\2/g"`
 version_code=`echo $version_code|sed "s/^\([\"']\)\(.*\)\1\$/\2/g"`
 version_name=`echo $version_name|sed "s/^\([\"']\)\(.*\)\1\$/\2/g"`
