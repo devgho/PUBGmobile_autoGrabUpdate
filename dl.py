@@ -11,7 +11,7 @@ all = res.text
 # print(res.text)
 url = re.search("https://dlied4.myapp.com/myapp/.*?apk",all).group()
 filename = re.search(r"(?P<u>.*/)(?P<filename>.*?apk)",url).group("filename")
-# print(filename)
+print(filename)
 if os.path.exists("/home/data/jymdata/auto_spider_apk/pubg/"+filename):
     pass
 else:
